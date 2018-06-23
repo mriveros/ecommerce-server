@@ -57,7 +57,7 @@
 	?>
 
 <div class="col-md-9 col-md-offset-2">
-	<h1>Menu Detail</h1>
+	<h1>Menu Detalle</h1>
 	<form method="post">
 		<table table class='table table-bordered table-condensed'>
 			<tr class="row">
@@ -65,35 +65,35 @@
 				<td class="detail"><?php echo $data['Menu_ID']; ?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail">Name</th>
+				<th class="detail">Nombre</th>
 				<td class="detail"><?php echo $data['Menu_name']; ?></td>
 			</tr>
 				<tr class="row">
-				<th class="detail">Status</th>
+				<th class="detail">Estado</th>
 				<td class="detail"><?php echo $data['Serve_for']; ?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail">Price</th>
+				<th class="detail">Precio</th>
 				<td class="detail"><?php echo $data['Price']." ".$currency; ?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail">Category</th>
+				<th class="detail">Categoría</th>
 				<td class="detail"><?php echo $data['Category_name']; ?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail">Image</th>
+				<th class="detail">Imagen</th>
 				<td class="detail"><img src="<?php echo $data['Menu_image']; ?>" width="200" height="150"/></td>
 			</tr>
 			<tr class="row">
-				<th class="detail">Description</th>
+				<th class="detail">Descripción</th>
 				<td class="detail"><?php echo $data['Description']; ?></td>
 			</tr>
 		</table>
 		
 	</form>
 	<div id="option_menu">
-			<a href="edit-menu.php?id=<?php echo $ID; ?>"><button class="btn btn-primary">Edit</button></a>
-			<a href="delete-menu.php?id=<?php echo $ID; ?>"><button class="btn btn-danger">Delete</button></a>
+			<a href="edit-menu.php?id=<?php echo $ID; ?>"><button class="btn btn-primary">Editar</button></a>
+			<a href="delete-menu.php?id=<?php echo $ID; ?>"><button class="btn btn-danger">Borrar</button></a>
 	</div>
 	
 	</div>

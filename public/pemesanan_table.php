@@ -136,7 +136,7 @@
 	<!-- search form -->
 	<form class="list_header" method="get">
 		<div class="col-md-12">
-			<p class="pholder">Search by Name : </p>
+			<p class="pholder">Buscar por Nombre : </p>
 		</div>
 		
 		<div class="col-md-3">
@@ -153,14 +153,14 @@
 	<div class="table-responsive">
 	<table class='table table-hover table-condensed table-bordered'>
 		<tr class="success">
-			<th>Name</th>
-			<th>Address</th>
+			<th>Nombre</th>
+			<th>Dirección</th>
 			<th>Email</th>
-			<th>Shipping by</th>
-			<th>Date & Time</th>
-			<th>Phone</th>
-			<th>Status</th>
-			<th>Action</th>
+			<th>Comprar para</th>
+			<th>Fecha y Hora</th>
+			<th>Teléfono</th>
+			<th>Estado</th>
+			<th>Acción</th>
 		</tr>
 		<?php
 			// get all data using while loop
@@ -175,11 +175,11 @@
 				<td><?php echo $data['Status'] == 1 ? "<span class='label label-primary'>PROCESSED</span>" : "<span class='label label-danger'>NOT PROCESSED</span>";?></td>
 				<td>
 					<a href="pemesanan-detail.php?id=<?php echo $data['ID'];?>">
-						Detail
+						Detalle
 					</a>&nbsp;
 
 					<a href="delete-pemesanan.php?id=<?php echo $data['ID'];?>">
-						Delete
+						Borrar
 					</a>
 				</td>
 			</tr>

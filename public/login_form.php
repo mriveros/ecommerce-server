@@ -70,14 +70,14 @@
 	      <div class="panel panel-default">
 			  <!-- Default panel contents -->
 			  <div class="panel-heading">
-				  <center><h3>Login Administrator</h3></center>
-				  <center>( E-Commerce Android App )</center>
+				  <center><h3>Login Administrador</h3></center>
+				  <center>( E-Commerce App )</center>
 			  </div>
 			  <div class="panel-body">
 				<center><?php echo isset($error['failed']) ? $error['failed'] : '';?></center>
 				<br>
 				    <form method="post">
-				            <label>Username :</label>
+				            <label>Usuario :</label>
 				            <input type="text" name="username" class="form-control" required>
 							
 							<br>
@@ -87,7 +87,7 @@
 							<br>
 							<button type="submit" name="btnLogin" class="btn btn-primary pull-right">Login</button><br><br>		
 				    </form>
-				<a href="forget-password.php"><p class="pull-right">Forgot Password?</p></a>
+				<a href="forget-password.php"><p class="pull-right">Olvidar Password?</p></a>
 			  </div>
 			</div>
 	</div>

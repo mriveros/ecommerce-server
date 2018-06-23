@@ -146,7 +146,7 @@
 	
 	<div class="col-md-5">
 		<form method="post">
-			<label>Username :</label>
+			<label>Usuario :</label>
 			<input type="text" class="form-control" id="disabledInput" value="<?php echo $username; ?>" disabled/>
 			<br/>
 
@@ -154,15 +154,15 @@
 			<input type="email" class="form-control" name="email" value="<?php echo $previous_email; ?>"/>
 			<br/>
 
-		    <label>Old Password :</label><?php echo isset($error['old_password']) ? $error['old_password'] : '';?>
+		    <label>Password Actual:</label><?php echo isset($error['old_password']) ? $error['old_password'] : '';?>
 			<input type="password" class="form-control" name="old_password"/>
 			<br/>
 
-		    <label>New Password :</label><?php echo isset($error['new_password']) ? $error['new_password'] : '';?>
+		    <label>Password Anterior:</label><?php echo isset($error['new_password']) ? $error['new_password'] : '';?>
 			<input type="password" class="form-control" name="new_password"/>
 			<br/>
 
-			<label>Re Type New Password :</label><?php echo isset($error['confirm_password']) ? $error['confirm_password'] : '';?>
+			<label>Reescribir Password :</label><?php echo isset($error['confirm_password']) ? $error['confirm_password'] : '';?>
 			<input type="password" class="form-control" name="confirm_password"/>
 			<br/>
 

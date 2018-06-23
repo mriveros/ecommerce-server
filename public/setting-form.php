@@ -108,17 +108,17 @@
 	?>
 
 	<div class="col-md-12">
-		<h1>Setting</h1>
+		<h1>Configuración</h1>
 		<?php echo isset($error['update_setting']) ? $error['update_setting'] : '';?>
 		<hr/>
 	</div>	
 
 	<div class="col-md-5">
 		<form method="post">
-			<label>Tax (%) :</label><?php echo isset($error['tax']) ? $error['tax'] : '';?>
+			<label>IVA (%) :</label><?php echo isset($error['tax']) ? $error['tax'] : '';?>
 			<input type="text" class="form-control" name="tax" value="<?php echo $previous_tax;?>" />
 			<br/>
-			<label>Currency :</label>
+			<label>Precio :</label>
 			<select name="currency" class="form-control">
 			<?php 
 				$function = new functions;

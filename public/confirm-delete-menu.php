@@ -59,10 +59,10 @@
 		}
 
 	?>
-	<h1>Confirm Action</h1>
+	<h1>Confirmar Acción</h1>
 	<hr />
 	<form method="post">
-		<p>Are you sure want to delete this menu?</p>
+		<p>Estas seguro de borrar este menú?</p>
 		<input type="submit" class="btn btn-primary" value="Delete" name="btnDelete"/>
 		<input type="submit" class="btn btn-danger" value="Cancel" name="btnNo"/>
 	</form>

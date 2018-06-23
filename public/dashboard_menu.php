@@ -52,7 +52,7 @@
 	              <center>
 	              <img src="images/ic_category.png" width="100" height="100">
 	                <h3><?php echo $total_category;?></h3>
-	                <p class="detail">Category</p>  
+	                <p class="detail">Categoría</p>  
 	                </center>
 	              </div>
 	            </div>
@@ -66,7 +66,7 @@
               <center>
               <img src="images/ic_menu.png" width="100" height="100">
                 <h3><?php echo $total_menu;?></h3>
-                <p class="detail">Menu List</p>  
+                <p class="detail">Menu Lista</p>  
                 </center>
               </div>
             </div>
@@ -80,7 +80,7 @@
               <center>
               <img src="images/ic_setting.png" width="100" height="100">
                 <h3><br></h3>
-                <p class="detail">Setting</p>     
+                <p class="detail">Configuración</p>     
                 </center>
               </div>
             </div>

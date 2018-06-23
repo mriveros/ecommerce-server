@@ -133,9 +133,9 @@
 		if($total_records_paging == 0){
 	
 	?>
-	<h1>Menu Not Available
+	<h1>Menu No Disponible
 		<a href="add-menu.php">
-			<button class="btn btn-danger">Add New Menu</button>
+			<button class="btn btn-danger">Agregar nuevo Menú</button>
 		</a>
 	</h1>
 	<hr />
@@ -149,7 +149,7 @@
 		<h1>
 			Menu List 
 			<a href="add-menu.php">
-				<button class="btn btn-danger">Add New Menu</button>
+				<button class="btn btn-danger">Agregar nuevo menú</button>
 			</a>
 			<hr/>
 		</h1>
@@ -159,7 +159,7 @@
 	<!-- search form -->
 	<form class="list_header" method="get">
 	<div class="col-md-12">
-		<p class="pholder">Search by Name : </p>
+		<p class="pholder">Buscar por Nombre : </p>
 	</div>
 
 	<div class="col-md-3">
@@ -175,13 +175,13 @@
 	<div class="table-responsive">
 	<table class='table table-hover table-condensed table-bordered'>
 		<tr class="success">
-			<th>Name</th>
-			<th>Image</th>
-			<th>Status</th>
+			<th>Nombre</th>
+			<th>Imagen</th>
+			<th>Estado</th>
 			<th>Stock</th>
-			<th>Price</th>
-			<th>Category</th>
-			<th>Action</th>
+			<th>Precio</th>
+			<th>Categoría</th>
+			<th>Acción</th>
 		</tr>
 	<?php 
 		// get all data using while loop
@@ -195,15 +195,15 @@
 			<td width="15%"><?php echo $data['Category_name'];?></td>
 			<td width="15%">
 				<a href="menu-detail.php?id=<?php echo $data['Menu_ID'];?>">
-					View
+					Ver
 				</a>&nbsp;
 
 				<a href="edit-menu.php?id=<?php echo $data['Menu_ID'];?>">
-					Edit
+					Editar
 				</a>&nbsp;
 
 				<a href="delete-menu.php?id=<?php echo $data['Menu_ID'];?>">
-					Delete
+					Borrar
 				</a>
 			</td>
 		</tr>

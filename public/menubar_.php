@@ -35,13 +35,13 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">		
 			<li><a href="menu.php">Menu</a></li>		
-			<li><a href="category.php">Category</a></li>		
-			<li><a href="setting.php">Setting</a></li>		
+			<li><a href="category.php">Categoría</a></li>		
+			<li><a href="setting.php">Configuración</a></li>		
 			<li><a href="admin.php">Admin</a></li>
       	</ul>
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="logout.php">Logout</a></li>
+        <li><a href="logout.php">Salir</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

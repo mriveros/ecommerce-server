@@ -164,7 +164,7 @@
 		
 	?>
 	<div class="col-md-12">
-		<h1>Edit Category</h1>
+		<h1>Editar Categoría</h1>
 		<?php echo isset($error['update_category']) ? $error['update_category'] : '';?>
 		<hr />
 	</div>
@@ -172,10 +172,10 @@
 	<div class="col-md-5">
 		<form method="post"
 			enctype="multipart/form-data">
-			<label>Category Name :</label><?php echo isset($error['category_name']) ? $error['category_name'] : '';?>
+			<label>Categoría Nombre :</label><?php echo isset($error['category_name']) ? $error['category_name'] : '';?>
 			<input type="text" class="form-control" name="category_name" value="<?php echo $data['Category_name']; ?>"/>
 			<br/>
-			<label>Image :</label><?php echo isset($error['category_image']) ? $error['category_image'] : '';?>
+			<label>Imagen :</label><?php echo isset($error['category_image']) ? $error['category_image'] : '';?>
 			<input type="file" name="category_image" id="category_image" /><br />
 			<img src="<?php echo $data['Category_image']; ?>" width="280" height="190"/>
 			<br/><br/>

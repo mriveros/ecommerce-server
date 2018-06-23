@@ -90,19 +90,19 @@
 				<td class="detail"><?php echo $data['ID']; ?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail active">Name</th>
+				<th class="detail active">Nombre</th>
 				<td class="detail"><?php echo $data['Name']; ?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail active">Address</th>
+				<th class="detail active">Dirección</th>
 				<td class="detail"><?php echo $data['Alamat']; ?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail active">City</th>
+				<th class="detail active">Ciudad</th>
 				<td class="detail"><?php echo $data['Kota']; ?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail active">Province</th>
+				<th class="detail active">Barrio</th>
 				<td class="detail"><?php echo $data['Provinsi']; ?></td>
 			</tr>
 			<tr class="row">
@@ -110,19 +110,19 @@
 				<td class="detail"><?php echo $data['Email']; ?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail active">Shipping by</th>
+				<th class="detail active">Comprar para</th>
 				<td><?php echo $data['Number_of_people'];?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail active">Time</th>
+				<th class="detail active">Tiempo</th>
 				<td class="detail"><?php echo $data['Date_n_Time']; ?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail active">Phone</th>
+				<th class="detail active">Teléfono</th>
 				<td class="detail"><?php echo $data['Phone_number']; ?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail active">Order list</th>
+				<th class="detail active">Lista Orden</th>
 				<td class="detail">
 					<ul>
 					<?php
@@ -139,19 +139,19 @@
 				</td>
 			</tr>
 			<tr class="row">
-				<th class="detail active">Comment</th>
+				<th class="detail active">Comentario</th>
 				<td class="detail"><?php echo empty($data['Comment']) ? 'No comment' : $data['Comment']; ?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail active">Status</th>
+				<th class="detail active">Estado</th>
 				<td class="detail">
 					<select name="status" class="form-control">	
 						<?php if($data['Status'] == 1){ ?>
-							<option value="1" selected="selected">Processed</option>
-							<option value="0" >Not Processed</option>
+							<option value="1" selected="selected">Procesado</option>
+							<option value="0" >No Procesado</option>
 						<?php }else{?>
-							<option value="1" >Processed</option>
-							<option value="0" selected="selected">Not Processed</option>
+							<option value="1" >Procesado</option>
+							<option value="0" selected="selected">No Procesado</option>
 						<?php }?>
 					</select>
 				</td>

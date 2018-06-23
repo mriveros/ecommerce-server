@@ -244,13 +244,13 @@
 	<form method="post" enctype="multipart/form-data">
 	<div class="col-md-9">
 		<div class="col-md-12">
-			<label>Menu Name :</label><?php echo isset($error['menu_name']) ? $error['menu_name'] : '';?>
+			<label>Menu Nombre :</label><?php echo isset($error['menu_name']) ? $error['menu_name'] : '';?>
 			<input type="text" name="menu_name" class="form-control" value="<?php echo $data['Menu_name']; ?>"/>
 		</div>
 
 		<div class="col-md-3">
 	    <br>
-	    <label>Price (<?php echo $currency;?>) :</label><?php echo isset($error['price']) ? $error['price'] : '';?>
+	    <label>Precio (<?php echo $currency;?>) :</label><?php echo isset($error['price']) ? $error['price'] : '';?>
 		<input type="text" name="price" class="form-control" value="<?php echo $data['Price'];?>"/>
 		<br/>
 
@@ -258,13 +258,13 @@
 		<input type="text" name="quantity" class="form-control" value="<?php echo $data['Quantity'];?>"/>
 		<br/>
 
-	    <label>Status :</label><?php echo isset($error['serve_for']) ? $error['serve_for'] : '';?>
+	    <label>Estado :</label><?php echo isset($error['serve_for']) ? $error['serve_for'] : '';?>
 		<select name="serve_for" class="form-control">
 			<option>Available</option>
 			<option>Sold Out</option>
 		</select>
 		<br/>
-	    <label>Category :</label><?php echo isset($error['category_ID']) ? $error['category_ID'] : '';?>
+	    <label>Categoría :</label><?php echo isset($error['category_ID']) ? $error['category_ID'] : '';?>
 		<select name="category_ID" class="form-control">
 			<?php while($stmt_category->fetch()){ 
 				if($category_data['Category_ID'] == $data['Category_ID']){?>
@@ -275,14 +275,14 @@
 		</select>
 		
 	    <br/>
-		<label>Image :</label><?php echo isset($error['menu_image']) ? $error['menu_image'] : '';?>
+		<label>Imagen :</label><?php echo isset($error['menu_image']) ? $error['menu_image'] : '';?>
 		<input type="file" name="menu_image" id="menu_image"/><br />
 		<img src="<?php echo $data['Menu_image']; ?>" width="210" height="160"/>
 		</div>
 
 		<div class="col-md-9">
 		<br>
-		<label>Description :</label><?php echo isset($error['description']) ? $error['description'] : '';?>
+		<label>Descripción :</label><?php echo isset($error['description']) ? $error['description'] : '';?>
 		<textarea name="description" id="description" class="form-control" rows="16"><?php echo $data['Description']; ?></textarea>
 		<script type="text/javascript" src="css/js/ckeditor/ckeditor.js"></script>
 		<script type="text/javascript">                        
@@ -294,7 +294,7 @@
 	<div class="col-md-3">
 	<br/>
 		<div class="panel panel-default">
-			<div class="panel-heading">Add</div>
+			<div class="panel-heading">Agregar</div>
 				<div class="panel-body">
 					<input type="submit" class="btn-primary btn" value="Update" name="btnEdit" />
 				</div>

@@ -113,7 +113,7 @@
 			
 		</table>
 
-		<button class="btn btn-primary" onclick="fungsiprint()">Print</button>
+		<button class="btn btn-primary" onclick="fungsiprint()">Imprimir</button>
 
 		<script>
 		function fungsiprint()

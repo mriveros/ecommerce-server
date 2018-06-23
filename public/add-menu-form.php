@@ -149,7 +149,7 @@
 			}
 	?>
 	<div class="col-md-12">
-	<h1>Add Menu <?php echo isset($error['add_menu']) ? $error['add_menu'] : '';?></h1>
+	<h1>Agregar Menu <?php echo isset($error['add_menu']) ? $error['add_menu'] : '';?></h1>
 	<hr />
 	</div>
 
@@ -159,27 +159,27 @@
 
 	<div class="col-md-9">
 		<div class="col-md-12">
-		<label>Menu Name :</label><?php echo isset($error['menu_name']) ? $error['menu_name'] : '';?>
+		<label>Nombre Menu  :</label><?php echo isset($error['menu_name']) ? $error['menu_name'] : '';?>
 		<input type="text" class="form-control" name="menu_name"/>
 		</div>
 	    <div class="col-md-3">
 	    <br>
-	    <label>Price (<?php echo $currency;?>) :</label><?php echo isset($error['price']) ? $error['price']:'';?>
+	    <label>Precio (<?php echo $currency;?>) :</label><?php echo isset($error['price']) ? $error['price']:'';?>
 		<input type="text" class="form-control" name="price"/>
 		<br/>
 
-		<label>Stock :</label><?php echo isset($error['quantity']) ? $error['quantity']:'';?>
+		<label>Cantidad :</label><?php echo isset($error['quantity']) ? $error['quantity']:'';?>
 		<input type="text" class="form-control" name="quantity"/>
 		<br/>
 	    
-	    <label>Status :</label><?php echo isset($error['serve_for']) ? $error['serve_for'] : '';?>
+	    <label>Estado :</label><?php echo isset($error['serve_for']) ? $error['serve_for'] : '';?>
 		<select name="serve_for" class="form-control">
 			<option>Available</option>
 			<option>Sold Out</option>
 		</select>
 		<br/>
 
-	    <label>Category :</label><?php echo isset($error['category_ID']) ? $error['category_ID'] : '';?>
+	    <label>Cateegoría :</label><?php echo isset($error['category_ID']) ? $error['category_ID'] : '';?>
 		<select name="category_ID" class="form-control">
 			<?php while($stmt_category->fetch()){ ?>
 				<option value="<?php echo $category_data['Category_ID']; ?>"><?php echo $category_data['Category_name']; ?></option>
@@ -193,7 +193,7 @@
 
 		<div class="col-md-9">
 		<br>
-		<label>Description :</label><?php echo isset($error['description']) ? $error['description'] : '';?>
+		<label>Descripción :</label><?php echo isset($error['description']) ? $error['description'] : '';?>
 		<textarea name="description" id="description" class="form-control" rows="16"></textarea>
 		<script type="text/javascript" src="css/js/ckeditor/ckeditor.js"></script>
 		<script type="text/javascript">                        
@@ -205,7 +205,7 @@
 	<br/>
 	<div class="col-md-3">
 		<div class="panel panel-default">
-			<div class="panel-heading">Add</div>
+			<div class="panel-heading">Agregar</div>
 				<div class="panel-body">
 					<input type="submit" class="btn-primary btn" value="Add" name="btnAdd" />&nbsp;
 					<input type="reset" class="btn-danger btn" value="Clear"/>

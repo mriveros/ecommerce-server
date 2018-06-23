@@ -89,7 +89,7 @@
 
 	?>
 	<div class="col-md-12">
-		<h1>Add Category</h1>
+		<h1>Agregar Categoría</h1>
 		<?php echo isset($error['add_category']) ? $error['add_category'] : '';?>
 		<hr />
 	</div>

@@ -68,18 +68,18 @@
 	?>
 	<h1>Error 404</h1>
 	<div class="menu_content">
-		<p>The article you are searching for is not available.</p>
+		<p>El artículo que estás buscando no está disponible.</p>
 	</div>
 	<?php }else{ ?>
 	<h1><?php echo $data['Menu_name']; ?></h1>
 	<div class="menu_content">
 		<img src="<?php echo $data['Menu_image']; ?>" width="280" height="200"/>
 		<p class="menu_margin">Serve for: <?php echo $data['Serve_for']; ?> people(s)</p>
-		<p>Price: <?php echo $data['Price']." ".$currency; ?></p>
-		<p>Category: <?php echo $data['Category_name']; ?></p>
+		<p>Precio: <?php echo $data['Price']." ".$currency; ?></p>
+		<p>Categoría: <?php echo $data['Category_name']; ?></p>
 		<p class="menu_margin"><?php echo $data['Description']; ?></p>
 		<div id="menu_button">
-			<a href="<?php echo $gplay_url; ?>">Download on Google Play</a>
+			<a href="<?php echo $gplay_url; ?>">Descargar en Google Play</a>
 		</div>
 	</div>
 	<div class="separator"> </div>

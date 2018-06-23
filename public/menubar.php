@@ -33,13 +33,13 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
 
-                <li class="sidebar-brand"><a href="dashboard.php">Ecommerce Admin Page</a></li> 
-                <li><a href="pemesanan.php">Order List</a></li>
-                <li><a href="category.php">Category</a></li>
-                <li><a href="menu.php">Product</a></li>    
-                <li><a href="setting.php">Setting</a></li>      
-                <li><a href="admin.php">User</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li class="sidebar-brand"><a href="dashboard.php">Ecommerce Admin</a></li> 
+                <li><a href="pemesanan.php">Lista de Ordenes</a></li>
+                <li><a href="category.php">Categoría</a></li>
+                <li><a href="menu.php">Producto</a></li>    
+                <li><a href="setting.php">Configuración</a></li>      
+                <li><a href="admin.php">Usuario</a></li>
+                <li><a href="logout.php">Salir</a></li>
 
             </ul>
         </div>

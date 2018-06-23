@@ -91,7 +91,7 @@
 	<hr>
 	<div class="col-md-3">
     	<form method="post">
-    		<label>Username:</label>
+    		<label>Usuario:</label>
 			<input type="text" name="username" class="form-control" />
 			<?php echo isset($error['username']) ? $error['username'] : '';?>
 			<?php echo isset($error['reset_result']) ? $error['reset_result'] : '';?>
@@ -99,7 +99,7 @@
 			<input type="submit" class="btn btn-primary" value="Send" name="btnReset"/>
     	</form>
     	<br>
-    	<a href="index.php"><p class="pull-right">Cancel</p></a>
+    	<a href="index.php"><p class="pull-right">Cancelar</p></a>
     </div>
 </div>
 </div>

@@ -7,7 +7,7 @@
 		<meta name="description" content="The Restaurant Admin panel is developed by Taufan E that sale on CodeCanyon.net">
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
-<title>Ecommerce Admin Page</title>
+<title>Ecommerce Admin</title>
     </head>
     <body>
     	<div id="container">

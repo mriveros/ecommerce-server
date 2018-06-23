@@ -103,9 +103,9 @@
 		if($total_records_paging == 0){
 	
 	?>
-	<h1>Category Not Available
+	<h1>Categoria no Disponible
 		<a href="add-category.php">
-			<button class="btn btn-danger">Add New Category</button>
+			<button class="btn btn-danger">Agregar nueva Categoría</button>
 		</a>
 	</h1>
 	<hr />
@@ -117,9 +117,9 @@
 
 	<div class="col-md-12">
 		<h1>
-			Category List
+			Categoría Lista
 			<a href="add-category.php">
-				<button class="btn btn-danger">Add New Category</button>
+				<button class="btn btn-danger">Agregar nueva Categoría</button>
 			</a>
 		</h1>
 		<hr/>
@@ -127,7 +127,7 @@
 	<!-- search form -->
 	<form class="list_header" method="get">
 		<div class="col-md-12">
-			<p class="pholder">Search by Name : </p>
+			<p class="pholder">Buscar por Nombre : </p>
 		</div>
 
 		<div class="col-md-3">
@@ -145,9 +145,9 @@
 	<div class="table-responsive">
 	<table class='table table-hover table-condensed table-bordered'>
 		<tr class="success">
-			<th>Name</th>
-			<th>Image</th>
-			<th>Action</th>
+			<th>Nombre</th>
+			<th>Imagen</th>
+			<th>Acción</th>
 		</tr>
 	<?php while ($stmt_paging->fetch()){ ?>
 		<tr>
