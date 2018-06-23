@@ -79,7 +79,7 @@
 
 <div class="col-md-7 col-md-offset-2">
 	<center>
-		<h1>Order Detail</h1>
+		<h1>Detalle de Ordenes</h1>
 		<?php echo isset($error['update_data']) ? $error['update_data'] : '';?>
 	</center>
 	<form method="post">
@@ -110,7 +110,7 @@
 				<td class="detail"><?php echo $data['Email']; ?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail active">Tipo Compra</th>
+				<th class="detail active">Tipo Entrega</th>
 				<td><?php echo $data['Number_of_people'];?></td>
 			</tr>
 			<tr class="row">
