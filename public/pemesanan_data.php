@@ -35,9 +35,9 @@
 			
 			// check update result
 			if($update_result){
-				$error['update_data'] = " <span class='label label-primary'>Success changed</span>";
+				$error['update_data'] = " <span class='label label-primary'>Cambio Exitoso!</span>";
 			}else{
-				$error['update_data'] = " <span class='label label-danger'>Failed</span>";
+				$error['update_data'] = " <span class='label label-danger'>Error!</span>";
 			}
 		}
 		

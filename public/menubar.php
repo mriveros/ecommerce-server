@@ -35,10 +35,10 @@
 
                 <li class="sidebar-brand"><a href="dashboard.php">Ecommerce Admin</a></li> 
                 <li><a href="pemesanan.php">Lista de Ordenes</a></li>
-                <li><a href="category.php">Categoría</a></li>
-                <li><a href="menu.php">Producto</a></li>    
+                <li><a href="category.php">Categorías</a></li>
+                <li><a href="menu.php">Productos</a></li>    
                 <li><a href="setting.php">Configuración</a></li>      
-                <li><a href="admin.php">Usuario</a></li>
+                <li><a href="admin.php">Usuarios</a></li>
                 <li><a href="logout.php">Salir</a></li>
 
             </ul>

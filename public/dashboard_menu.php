@@ -38,7 +38,7 @@
 	              <center>
 	              <img src="images/ic_order.png" width="100" height="100">
 	                <h3><?php echo $total_order;?></h3>
-	                <p class="detail">Order List</p>  
+	                <p class="detail">Listas de Ordenes</p>  
 	                </center>
 	              </div>
 	            </div>
@@ -52,7 +52,7 @@
 	              <center>
 	              <img src="images/ic_category.png" width="100" height="100">
 	                <h3><?php echo $total_category;?></h3>
-	                <p class="detail">Categoría</p>  
+	                <p class="detail">Categorías</p>  
 	                </center>
 	              </div>
 	            </div>
@@ -66,7 +66,7 @@
               <center>
               <img src="images/ic_menu.png" width="100" height="100">
                 <h3><?php echo $total_menu;?></h3>
-                <p class="detail">Menu Lista</p>  
+                <p class="detail">Productos</p>  
                 </center>
               </div>
             </div>

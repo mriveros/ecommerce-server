@@ -172,7 +172,7 @@
 				<td><?php echo $data['Number_of_people'];?></td>
 				<td><?php echo $data['Date_n_Time'];?></td>
 				<td><?php echo $data['Phone_number'];?></td>
-				<td><?php echo $data['Status'] == 1 ? "<span class='label label-primary'>PROCESSED</span>" : "<span class='label label-danger'>NOT PROCESSED</span>";?></td>
+				<td><?php echo $data['Status'] == 1 ? "<span class='label label-primary'>PROCESADO</span>" : "<span class='label label-danger'>NO PROCESADO</span>";?></td>
 				<td>
 					<a href="pemesanan-detail.php?id=<?php echo $data['ID'];?>">
 						Detalle
