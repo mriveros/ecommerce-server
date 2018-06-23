@@ -58,7 +58,7 @@
 					$_SESSION['timeout'] = $currentTime + $expired;
 					header("location: dashboard.php");
 				}else{
-					$error['failed'] = "<span class='label label-danger'>Invalid Username or Password!</span>";
+					$error['failed'] = "<span class='label label-danger'>Usuario o Password Inválido</span>";
 				}
 			}
 			
