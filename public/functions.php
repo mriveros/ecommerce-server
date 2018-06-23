@@ -42,6 +42,7 @@
 			array('code' => 'PEN', 'name' => 'Peruvian Nuevo Sol'),
 			array('code' => 'PHP', 'name' => 'Philippine Peso'),
 			array('code' => 'PKR', 'name' => 'Pakistan Rupee'),
+                        array('code' => 'Gs', 'name' => 'Paraguay Guaraní'),
 			array('code' => 'PLN', 'name' => 'Polish Zloty'),
 			array('code' => 'RON', 'name' => 'Romanian New Lei'),
 			array('code' => 'RSD', 'name' => 'Serbian Dinar'),

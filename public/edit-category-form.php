@@ -123,13 +123,13 @@
 				// check update result
 				if($update_result){
 					$error['update_category'] = " <h4><div class='alert alert-success'>
-														Success update category
+														Categoría Actualizada
 														<a href='category.php'>
 														<i class='fa fa-check fa-lg'></i>
 														</a></div>
 												  </h4>";
 				}else{
-					$error['update_category'] = " <span class='label label-danger'>Failed update category</span>";
+					$error['update_category'] = " <span class='label label-danger'>Error al Actualizar la Categoría</span>";
 				}
 			}
 				

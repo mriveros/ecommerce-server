@@ -156,8 +156,8 @@
 			<th>Nombre</th>
 			<th>Dirección</th>
 			<th>Email</th>
-			<th>Comprar para</th>
-			<th>Fecha y Hora</th>
+			<th>Tipo Compra</th>
+			<th>Fecha Entrega</th>
 			<th>Teléfono</th>
 			<th>Estado</th>
 			<th>Acción</th>

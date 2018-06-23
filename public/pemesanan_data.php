@@ -110,11 +110,11 @@
 				<td class="detail"><?php echo $data['Email']; ?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail active">Comprar para</th>
+				<th class="detail active">Tipo Compra</th>
 				<td><?php echo $data['Number_of_people'];?></td>
 			</tr>
 			<tr class="row">
-				<th class="detail active">Tiempo</th>
+				<th class="detail active">Fecha Entrega</th>
 				<td class="detail"><?php echo $data['Date_n_Time']; ?></td>
 			</tr>
 			<tr class="row">

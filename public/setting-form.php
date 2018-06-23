@@ -63,7 +63,7 @@
 				// check update result
 			if($update_result){
 				$error['update_setting'] = " <h4><div class='alert alert-success'>
-														* Setting berhasil diubah
+														*Moneda Actualizada
 												 </div>
 												  </h4>";
 			}else{

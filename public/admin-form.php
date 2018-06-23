@@ -68,19 +68,19 @@
 								$error['confirm_password'] = " <span class='label label-danger'>New password and re new password required!</span>";
 							}
 						}else{
-							$error['old_password'] = " <span class='label label-danger'>Old password wrong!</span>";
+							$error['old_password'] = " <span class='label label-danger'>Password anterior incorrecto!</span>";
 						}
 					}else{
-						$error['old_password'] = " <span class='label label-danger'>Old password required!</span>";
+						$error['old_password'] = " <span class='label label-danger'>Password anterior requerido!</span>";
 					}
 				}
 				
 				if(empty($email)){
-					$error['email'] = " <span class='label label-danger'>Email required!</span>";
+					$error['email'] = " <span class='label label-danger'>Email requerido!</span>";
 				}else{
 					$valid_mail = "/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i";
 					if (!preg_match($valid_mail, $email)){
-						$error['email'] = " <span class='label label-danger'>Wrong email format!</span>";
+						$error['email'] = " <span class='label label-danger'>Formato de Email Incorrecto!</span>";
 						$email = "";
 					}else{
 						// update password in user table
@@ -112,12 +112,12 @@
 					$headers = 'From:' . $from;
 					mail($to,$subject,$message,$headers);
 					$error['update_user'] = " <h4><div class='alert alert-success'>
-														Success changed
+														Cambio Exitoso
 												 </div>
 												  </h4>";
 				}else{
 					$error['update_user'] = " <h4><div class='alert alert-danger'>
-														Failed
+														Error
 												 </div>
 												  </h4>";
 				}
@@ -166,7 +166,7 @@
 			<input type="password" class="form-control" name="confirm_password"/>
 			<br/>
 
-		    <input type="submit" class="btn-primary btn" value="Change" name="btnChange"/>		
+		    <input type="submit" class="btn-primary btn" value="Cambiar" name="btnChange"/>		
 		</form>
 	<div class="col-md-5">
 
