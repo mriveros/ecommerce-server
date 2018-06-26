@@ -1,5 +1,5 @@
 <?php
-    require("password.php");
+   
 
     $connect = mysqli_connect("localhost", "root", "Riveros200587!", "ecommerce");
     
