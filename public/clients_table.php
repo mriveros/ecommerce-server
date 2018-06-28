@@ -107,7 +107,7 @@
 		if($total_records_paging == 0){
 	
 	?>
-	<h1>Cliente no Disponible
+	<h1>Lista de Clientes no Disponible
 	</h1>
 	<hr />
 	<?php 
