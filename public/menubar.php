@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Ecommerce</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -35,6 +35,7 @@
 
                 <li class="sidebar-brand"><a href="dashboard.php">Ecommerce Admin</a></li> 
                 <li><a href="pemesanan.php">Lista de Ordenes</a></li>
+                <li><a href="clients.php">Clientes</a></li>
                 <li><a href="category.php">Categorías</a></li>
                 <li><a href="menu.php">Productos</a></li>    
                 <li><a href="setting.php">Configuración</a></li>      
