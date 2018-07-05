@@ -1,4 +1,4 @@
-<?php
+<?php 
 	include_once('includes/connect_database.php'); 
 ?>
 
@@ -65,7 +65,10 @@
 					$data['Order_list'],
 					$data['Status'],
 					$data['Comment'],
-					$data['Email']
+					$data['Email'],
+					$data['Latitude'],
+					$data['Longitude'],
+					$data['Address']
 					);
 			$stmt->fetch();
 			$stmt->close();
