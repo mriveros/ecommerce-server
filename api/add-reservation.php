@@ -33,7 +33,7 @@
 	$stmt = $connect->stmt_init();
 	if($stmt->prepare($sql_query)) {	
 		// Bind your variables to replace the ?s
-		$stmt->bind_param('ssssssssss', 
+		$stmt->bind_param('sssssssssssss', 
 					$name,
 					$alamat,	
 					$kota,	
