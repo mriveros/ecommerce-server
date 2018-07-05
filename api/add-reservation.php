@@ -13,6 +13,9 @@
 	$order_list = $_POST['order_list'];
 	$comment = $_POST['comment'];
 	$email = $_POST['email'];
+	$latitude = $_POST['latitude'];
+	$logitude = $_POST['longitude'];
+	$address = $_POST['address'];
 	
 	$sql_query = "set names 'utf8'";
 	$stmt = $connect->stmt_init();
@@ -24,8 +27,8 @@
 	}
 	
 	// insert data into reservation table
-	$sql_query = "INSERT INTO tbl_reservation(Name, Alamat, Kota, Provinsi, Number_of_people, Date_n_Time, Phone_number, Order_list, Comment, Email) 
-					VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	$sql_query = "INSERT INTO tbl_reservation(Name, Alamat, Kota, Provinsi, Number_of_people, Date_n_Time, Phone_number, Order_list, Comment, Email, Latitude, Longitude, Address) 
+					VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?)";
 	
 	$stmt = $connect->stmt_init();
 	if($stmt->prepare($sql_query)) {	
@@ -40,7 +43,10 @@
 					$phone, 
 					$order_list,
 					$comment,
-					$email
+					$email,
+					$latitude,
+					$longitude,
+					$address
 					);
 		// Execute query
 		$stmt->execute();
