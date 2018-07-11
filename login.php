@@ -19,6 +19,7 @@
         if (password_verify($password, $colPassword)) {
             $response["success"] = true;  
             $response["name"] = $colName;
+            $response["username"] = $colUsername;
            
         }
     }
