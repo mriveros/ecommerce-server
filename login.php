@@ -6,7 +6,7 @@
     $username = $_POST["username"];
     $password = $_POST["password"];
     
-    $statement = mysqli_prepare($con, "SELECT name,age,username,password FROM clients WHERE username = ?");
+    $statement = mysqli_prepare($con, "SELECT name,username,password FROM clients WHERE username = ?");
     mysqli_stmt_bind_param($statement, "s", $username);
     mysqli_stmt_execute($statement);
     mysqli_stmt_store_result($statement);
@@ -19,7 +19,7 @@
         if (password_verify($password, $colPassword)) {
             $response["success"] = true;  
             $response["name"] = $colName;
-            $response["age"] = $colAge;
+            //$response["age"] = $colAge;
         }
     }
 
