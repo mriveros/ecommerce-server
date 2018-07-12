@@ -2,17 +2,26 @@
    
 
     $connect = mysqli_connect("localhost", "root", "Riveros200587!", "ecommerce");
+
+
+
     
     $name = $_POST["name"];
-    $age = $_POST["age"];
+    $lastname = $_POST["lastname"];
+    $birtdate = $_POST["birtdate"];
     $username = $_POST["username"];
     $password = $_POST["password"];
+    $address = $_POST["address"];
+    $city = $_POST["city"];
+    $neigboorhood = $_POST["neigboorhood"];
+    $phone = $_POST["phone"];
+    $mail = $_POST["mail"];
 
      function registerUser() {
         global $connect, $name, $age, $username, $password;
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-        $statement = mysqli_prepare($connect, "INSERT INTO clients (name, age, username, password) VALUES (?, ?, ?, ?)");
-        mysqli_stmt_bind_param($statement, "siss", $name, $age, $username, $passwordHash);
+        $statement = mysqli_prepare($connect, "INSERT INTO clients (name, lastname, birth, username, password, address, city, neighborhood, phone, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ? )");
+        mysqli_stmt_bind_param($statement, "ssssssssss", $name, $lastname, $birtdate ,$username, $passwordHash, $address, $city, $neigboorhood, $phone, $mail);
         mysqli_stmt_execute($statement);
         mysqli_stmt_close($statement);     
     }
