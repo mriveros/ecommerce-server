@@ -18,7 +18,7 @@
     $mail = $_POST["mail"];
 
      function registerUser() {
-        global $connect, $name, $age, $username, $password;
+        global $connect, $name, $lastname, $birtdate, $username, $password, $address, $city, $neigboorhood, $phone, $mail;
         $passwordHash = password_hash($password, PASSWORD_DEFAULT);
         $statement = mysqli_prepare($connect, "INSERT INTO clients (name, lastname, birth, username, password, address, city, neighborhood, phone, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ? )");
         mysqli_stmt_bind_param($statement, "ssssssssss", $name, $lastname, $birtdate ,$username, $passwordHash, $address, $city, $neigboorhood, $phone, $mail);
