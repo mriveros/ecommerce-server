@@ -21,11 +21,11 @@
 		}
 			
 		if(empty($keyword)){
-			$sql_query = "SELECT id, name, username, password, age
+			$sql_query = "SELECT id, name, username, password
 					FROM clients
 					ORDER BY id DESC";
 		}else{
-			$sql_query = "SELECT id, name, username, password, age
+			$sql_query = "SELECT id, name, username, password
 					FROM clients
 					WHERE name LIKE ? 
 					ORDER BY id DESC";
@@ -44,7 +44,6 @@
 			$stmt->store_result();
 			$stmt->bind_result($data['id'], 
 					$data['name'],
-					$data['age'],
 					$data['username'],
 					$data['password']
 					);
@@ -71,11 +70,11 @@
 		}	
 		
 		if(empty($keyword)){
-			$sql_query = "SELECT id, name, username, password, age 
+			$sql_query = "SELECT id, name, username, password 
 					FROM clients
 					ORDER BY id DESC LIMIT ?, ?";
 		}else{
-			$sql_query = "SELECT id, name,, username, password, age 
+			$sql_query = "SELECT id, name,, username, password 
 					FROM clients
 					WHERE name LIKE ? 
 					ORDER BY id DESC LIMIT ?, ?";
@@ -96,8 +95,8 @@
 			$stmt_paging->bind_result($data['id'], 
 					$data['name'],
 					$data['username'],
-					$data['password'],
-					$data['age']
+					$data['password']
+					
 					);
 			// for paging purpose
 			$total_records_paging = $total_records; 
@@ -146,14 +145,14 @@
 		<tr class="success">
 			<th>Nombre</th>
 			<th>Usuario</th>
-			<th>Edad</th>
+			
 			<th>Acción</th>
 		</tr>
 	<?php while ($stmt_paging->fetch()){ ?>
 		<tr>
 			<td><?php echo $data['name'];?></td>
 			<td><?php echo $data['username'];?></td>
-			<td><?php echo $data['age'];?></td>
+			
 			<td width="25%">
 				<a href="delete-clients.php?id=<?php echo $data['id'];?>">
 				Borrar
