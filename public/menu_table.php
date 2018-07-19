@@ -147,9 +147,9 @@
 	?>
 	<div class="col-md-12">
 		<h1>
-			Menu List 
+			Lista de Productos
 			<a href="add-menu.php">
-				<button class="btn btn-danger">Agregar nuevo menú</button>
+				<button class="btn btn-danger">Agregar nuevo Producto</button>
 			</a>
 			<hr/>
 		</h1>
