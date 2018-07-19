@@ -129,7 +129,7 @@
 	<div>
 
 	<div class="col-md-12">
-		<h1>Order List</h1>
+		<h1>Lista de Pedidos - Órdenes</h1>
 		<hr/>
 	</div>
 

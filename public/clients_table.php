@@ -117,7 +117,7 @@
 
 	<div class="col-md-12">
 		<h1>
-			Clientes Lista
+			Lista de Clientes
 			
 		</h1>
 		<hr/>

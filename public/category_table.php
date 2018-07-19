@@ -117,7 +117,7 @@
 
 	<div class="col-md-12">
 		<h1>
-			Categoría Lista
+			lista de Categorías
 			<a href="add-category.php">
 				<button class="btn btn-danger">Agregar nueva Categoría</button>
 			</a>
