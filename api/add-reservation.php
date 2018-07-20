@@ -3,10 +3,13 @@
 	include_once('../includes/variables.php');
 	
 	// get data from android app
-	$name = $_POST['name'];
+	$name ="Borrar Columna";
+	 // $_POST['name'];
 	$alamat = $_POST['alamat'];
-	$kota = $_POST['kota'];
-	$provinsi = $_POST['provinsi'];
+	$kota = "Borrar Columna";
+	//$_POST['kota'];
+	$provinsi = "Borrar Columna";
+	//$_POST['provinsi'];
 	$name2 = $_POST['name2'];
 	$date_n_time = $_POST['date_n_time'];
 	$phone = $_POST['phone'];
@@ -16,6 +19,7 @@
 	$latitude = $_POST['latitude'];
 	$logitude = $_POST['longitude'];
 	$address = $_POST['address'];
+	$cod_client = $_POST['cod_client'];
 	
 	$sql_query = "set names 'utf8'";
 	$stmt = $connect->stmt_init();
@@ -27,13 +31,13 @@
 	}
 	
 	// insert data into reservation table
-	$sql_query = "INSERT INTO tbl_reservation(Name, Alamat, Kota, Provinsi, Number_of_people, Date_n_Time, Phone_number, Order_list, Comment, Email, Latitude, Longitude, Address) 
-					VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?,?)";
+	$sql_query = "INSERT INTO tbl_reservation(Name, Alamat, Kota, Provinsi, Number_of_people, Date_n_Time, Phone_number, Order_list, Comment, Email, Latitude, Longitude, Address, cod_client) 
+					VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 	
 	$stmt = $connect->stmt_init();
 	if($stmt->prepare($sql_query)) {	
 		// Bind your variables to replace the ?s
-		$stmt->bind_param('sssssssssssss', 
+		$stmt->bind_param('ssssssssssssss', 
 					$name,
 					$alamat,	
 					$kota,	
@@ -46,7 +50,8 @@
 					$email,
 					$latitude,
 					$longitude,
-					$address
+					$address,
+					$cod_client
 					);
 		// Execute query
 		$stmt->execute();
