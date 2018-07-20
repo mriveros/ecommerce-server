@@ -6,11 +6,11 @@
     $username = $_POST["username"];
     $password = $_POST["password"];
     
-    $statement = mysqli_prepare($con, "SELECT id,name,username,password,phone,email FROM clients WHERE username = ?");
+    $statement = mysqli_prepare($con, "SELECT id,name,username,password,phone,email,address FROM clients WHERE username = ?");
     mysqli_stmt_bind_param($statement, "s", $username);
     mysqli_stmt_execute($statement);
     mysqli_stmt_store_result($statement);
-    mysqli_stmt_bind_result($statement,$colId, $colName,$colUsername, $colPassword, $colPhone,$colEmail);
+    mysqli_stmt_bind_result($statement,$colId, $colName,$colUsername, $colPassword, $colPhone,$colEmail, $colAddress);
     
     $response = array();
     $response["success"] = false;  
@@ -23,6 +23,7 @@
             $response["username"] = $colUsername;
 	$response["phone"] = $colPhone;
 	$response["email"] = $colEmail;
+	$response["address"] = $colAddress;
            
         }
     }
