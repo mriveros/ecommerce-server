@@ -23,9 +23,9 @@
 		
 		// get all data from pemesanan table
 		if(empty($keyword)){
-			$sql_query = "SELECT ID, Name, Alamat, Number_of_people, Date_n_Time, Phone_number, Status, Email
-				FROM tbl_reservation  
-				ORDER BY Date_n_Time DESC";
+			$sql_query = "SELECT res.ID, cli.name as Name, cli.address as Alamat, res.Number_of_people, res.Date_n_Time, res.Phone_number, res.Status, cli.email as Email
+                                FROM tbl_reservation res, clients cli where res.cod_client = cli.id
+                                ORDER BY Date_n_Time DESC";
 		}else{
 			$sql_query = "SELECT ID, Name, Alamat, Number_of_people, Date_n_Time, Phone_number, Status, Email
 				FROM tbl_reservation 
@@ -77,14 +77,14 @@
 		
 		// get all data from pemesanan table
 		if(empty($keyword)){
-			$sql_query = "SELECT ID, Name, Alamat, Number_of_people, Date_n_Time, Phone_number, Status, Email 
-				FROM tbl_reservation 
+			$sql_query = "SELECT res.ID,cli.name as  Name, cli.address as  Alamat, res.Number_of_people, res.Date_n_Time, res.Phone_number, res.Status, res.email as Email 
+				FROM tbl_reservation res , clients cli where res.cod_client = cli.id
 				ORDER BY Date_n_Time DESC 
 				LIMIT ?, ?";
 		}else{
-			$sql_query = "SELECT ID, Name, Alamat, Number_of_people, Date_n_Time, Phone_number, Status, Email 
-				FROM tbl_reservation 
-				WHERE Name LIKE ? 
+			$sql_query = "SELECT res.ID, cli.name as  Name, cli.address as  Alamat, res.Number_of_people, res.Date_n_Time, res.Phone_number, res.Status, cli.email as Email 
+				FROM tbl_reservation res, clients cli 
+				WHERE res.cod_client = cli.id and cli.name LIKE ? 
 				ORDER BY Date_n_Time ASC 
 				LIMIT ?, ?";
 		}
@@ -119,7 +119,7 @@
 		// if no data on database show "Tidak Ada Pemesanan"
 		if($total_records_paging == 0){
 	?>
-	<h1>There is No Order</h1>
+	<h1>No hay órdenes realizadas.</h1>
 	<hr />
 	
 	<?php

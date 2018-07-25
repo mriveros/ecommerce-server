@@ -42,9 +42,11 @@
 		}
 		
 		// get data from reservation table
-		$sql_query = "SELECT * 
-				FROM tbl_reservation 
-				WHERE ID = ?";
+		$sql_query = "SELECT res.ID , cli.name as Name, cli.address as Alamat, 
+			cli.neighborhood as Provinsi, cli.city as Kota, res.Number_of_people, 
+			res.Date_n_Time, res.Phone_number,res.Order_list, res.Status, res.Comment, cli.email as Email 
+				FROM tbl_reservation res, clients cli  
+				WHERE res.cod_client = cli.id and  res.ID = ?";
 		
 		$stmt = $connect->stmt_init();
 		if($stmt->prepare($sql_query)) {	
@@ -57,18 +59,15 @@
 			$stmt->bind_result($data['ID'], 
 					$data['Name'],
 					$data['Alamat'],
-					$data['Kota'],
 					$data['Provinsi'],
+					$data['Kota'],
 					$data['Number_of_people'], 
 					$data['Date_n_Time'], 
 					$data['Phone_number'],
 					$data['Order_list'],
 					$data['Status'],
 					$data['Comment'],
-					$data['Email'],
-					$data['Latitude'],
-					$data['Longitude'],
-					$data['Address']
+					$data['Email']
 					);
 			$stmt->fetch();
 			$stmt->close();
@@ -143,7 +142,7 @@
 			</tr>
 			<tr class="row">
 				<th class="detail active">Comentario</th>
-				<td class="detail"><?php echo empty($data['Comment']) ? 'No comment' : $data['Comment']; ?></td>
+				<td class="detail"><?php echo empty($data['Comment']) ? 'Sin Comentarios' : $data['Comment']; ?></td>
 			</tr>
 			<tr class="row">
 				<th class="detail active">Estado</th>
