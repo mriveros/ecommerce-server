@@ -21,11 +21,11 @@
 		}
 			
 		if(empty($keyword)){
-			$sql_query = "SELECT id, name, username, password
+			$sql_query = "SELECT id, name, lastname, username, password, address, neighborhood, city, phone, email	
 					FROM clients
 					ORDER BY id DESC";
 		}else{
-			$sql_query = "SELECT id, name, username, password
+			$sql_query = "SELECT id, name, lastname, username, password,  address, neighborhood, city, phone, email
 					FROM clients
 					WHERE name LIKE ? 
 					ORDER BY id DESC";
@@ -44,8 +44,14 @@
 			$stmt->store_result();
 			$stmt->bind_result($data['id'], 
 					$data['name'],
+					$data['lastname'],
 					$data['username'],
-					$data['password']
+					$data['password'],
+					$data['address'],
+					$data['neighborhood'],
+					$data['city'],
+					$data['phone'],
+					$data['email']
 					);
 			// get total records
 			$total_records = $stmt->num_rows;
@@ -70,11 +76,11 @@
 		}	
 		
 		if(empty($keyword)){
-			$sql_query = "SELECT id, name, username, password 
+			$sql_query = "SELECT id, name,lastname, username, password ,  address, neighborhood, city, phone, email
 					FROM clients
 					ORDER BY id DESC LIMIT ?, ?";
 		}else{
-			$sql_query = "SELECT id, name,, username, password 
+			$sql_query = "SELECT id, name,lastname ,username, password ,  address, neighborhood, city, phone, email
 					FROM clients
 					WHERE name LIKE ? 
 					ORDER BY id DESC LIMIT ?, ?";
@@ -94,8 +100,14 @@
 			$stmt_paging ->store_result();
 			$stmt_paging->bind_result($data['id'], 
 					$data['name'],
-					$data['username'],
-					$data['password']
+					$data['lastname'],
+                                        $data['username'],
+                                        $data['password'],
+                                        $data['address'],
+                                        $data['neighborhood'],
+                                        $data['city'],
+                                        $data['phone'],
+                                        $data['email']
 					
 					);
 			// for paging purpose
@@ -141,18 +153,28 @@
 	<br/>
 	<div class="col-md-5">
 	<div class="table-responsive">
-	<table class='table table-hover table-condensed table-bordered'>
+	<table  class='table table-hover table-condensed table-bordered'>
 		<tr class="success">
 			<th>Nombre</th>
+			<th>Apellido</th>
 			<th>Usuario</th>
-			
+			<th>Dirección</th>
+			<th>Barrio</th>
+			<th>Ciudad</th>
+			<th>Teléfono</th>
+			<th>Email</th>
 			<th>Acción</th>
 		</tr>
 	<?php while ($stmt_paging->fetch()){ ?>
 		<tr>
 			<td><?php echo $data['name'];?></td>
+			<td><?php echo $data['lastname'];?></td>
 			<td><?php echo $data['username'];?></td>
-			
+			<td><?php echo $data['address'];?></td>
+			<td><?php echo $data['neighborhood'];?></td>
+			<td><?php echo $data['city'];?></td>
+			<td><?php echo $data['phone'];?></td>
+			<td><?php echo $data['email'];?></td>
 			<td width="25%">
 				<a href="delete-clients.php?id=<?php echo $data['id'];?>">
 				Borrar
