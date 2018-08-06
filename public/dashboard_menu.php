@@ -16,7 +16,7 @@
 	$total_category = mysqli_query($connect, $sql_category);
 	$total_category = mysqli_fetch_array($total_category);
 	$total_category = $total_category['num'];
-
+	
 	//Total menu count
 	$sql_menu = "SELECT COUNT(*) as num FROM tbl_menu";
 	$total_menu = mysqli_query($connect, $sql_menu);

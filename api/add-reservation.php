@@ -1,6 +1,7 @@
 <?php
 	include_once('../includes/connect_database.php'); 
 	include_once('../includes/variables.php');
+	include_once('../includes/other_functions.php');
 	
 	// get data from android app
 	$name ="Borrar Columna";
@@ -60,6 +61,7 @@
 		//$result = $stmt->store_result();
 		$stmt->close();
 	}
+	send_mail($email);
 	
 	// get admin email from user table
 	$sql_query = "SELECT Email 
