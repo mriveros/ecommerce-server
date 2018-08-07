@@ -7,8 +7,8 @@
 
 		$from = "ecommerce23py@gmail.com";
 		$to = $email;
-		$subject = "Hi!";
-		$body = "Hi,\n\nHow are you?";
+		$subject = "Hola!";
+		$body = "Felicidades!,\n\nHemos recibido tu pedido, en breve preparamos y te lo enviamos a tu dirección.";
 
 		$host = "smtp.gmail.com";
 		$username = "ecommerce23py@gmail.com";
