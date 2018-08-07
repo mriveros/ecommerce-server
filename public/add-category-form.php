@@ -16,7 +16,7 @@
 			$error = array();
 			
 			if(empty($category_name)){
-				$error['category_name'] = " <span class='label label-danger'>Required!</span>";
+				$error['category_name'] = " <span class='label label-danger'>Requerido!</span>";
 			}
 			
 			// common image file extensions
@@ -27,7 +27,7 @@
 			$extension = end(explode(".", $_FILES["category_image"]["name"]));
 					
 			if($image_error > 0){
-				$error['category_image'] = " <span class='label label-danger'>Not Uploaded!!</span>";
+				$error['category_image'] = " <span class='label label-danger'>No se ha podido cargar!!</span>";
 			}else if(!(($image_type == "image/gif") || 
 				($image_type == "image/jpeg") || 
 				($image_type == "image/jpg") || 
@@ -36,7 +36,7 @@
 				($image_type == "image/pjpeg")) &&
 				!(in_array($extension, $allowedExts))){
 			
-				$error['category_image'] = " <span class='label label-danger'>Image type must jpg, jpeg, gif, or png!</span>";
+				$error['category_image'] = " <span class='label label-danger'>Tipo de imagen debe ser jpg, jpeg, gif, o png!</span>";
 			}
 			
 			if(!empty($category_name) && empty($error['category_image'])){
@@ -71,13 +71,13 @@
 				
 				if($result){
 					$error['add_category'] = " <h4><div class='alert alert-success'>
-														* Success add new category
+														* Categoría agregada exitosamente
 														<a href='category.php'>
 														<i class='fa fa-check fa-lg'></i>
 														</a></div>
 												  </h4>";
 				}else{
-					$error['add_category'] = " <span class='label label-danger'>Failed add category</span>";
+					$error['add_category'] = " <span class='label label-danger'>Error al intentar agregar la Categoría</span>";
 				}
 			}
 			
@@ -97,10 +97,10 @@
 	<div class="col-md-5">
 		<form method="post"
 			enctype="multipart/form-data">
-			<label>Category Name :</label><?php echo isset($error['category_name']) ? $error['category_name'] : '';?>
+			<label>Nombre Categoría :</label><?php echo isset($error['category_name']) ? $error['category_name'] : '';?>
 			<input type="text" class="form-control" name="category_name"/>
 			<br/>
-			<label>Image :</label><?php echo isset($error['category_image']) ? $error['category_image'] : '';?>
+			<label>Imagen :</label><?php echo isset($error['category_image']) ? $error['category_image'] : '';?>
 			<input type="file" name="category_image" id="category_image" />
 			<br/>
 			<input type="submit" class="btn-primary btn" value="Submit" name="btnAdd"/>

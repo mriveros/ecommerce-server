@@ -174,8 +174,8 @@
 	    
 	    <label>Estado :</label><?php echo isset($error['serve_for']) ? $error['serve_for'] : '';?>
 		<select name="serve_for" class="form-control">
-			<option>Available</option>
-			<option>Sold Out</option>
+			<option>Disponible</option>
+			<option>No Disponible</option>
 		</select>
 		<br/>
 

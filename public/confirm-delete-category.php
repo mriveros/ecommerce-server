@@ -104,8 +104,8 @@
 	<hr />
 	<form method="post">
 		<p>Estas seguro de borrar ésta Categoría?</p>
-		<input type="submit" class="btn btn-primary" value="Delete" name="btnDelete"/>
-		<input type="submit" class="btn btn-danger" value="Cancel" name="btnNo"/>
+		<input type="submit" class="btn btn-primary" value="Borrar" name="btnDelete"/>
+		<input type="submit" class="btn btn-danger" value="Cancelar" name="btnNo"/>
 	</form>
 	<div class="separator"> </div>
 </div>

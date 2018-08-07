@@ -103,7 +103,7 @@
 		if($total_records_paging == 0){
 	
 	?>
-	<h1>Categoria no Disponible
+	<h1>Categoría no Disponible
 		<a href="add-category.php">
 			<button class="btn btn-danger">Agregar nueva Categoría</button>
 		</a>
@@ -117,7 +117,7 @@
 
 	<div class="col-md-12">
 		<h1>
-			lista de Categorías
+			Lista de Categorías
 			<a href="add-category.php">
 				<button class="btn btn-danger">Agregar nueva Categoría</button>
 			</a>
@@ -155,10 +155,10 @@
 			<td><img src="<?php echo $data['Category_image']; ?>" width="40" height="40"/></td>
 			<td width="25%">
 				<a href="edit-category.php?id=<?php echo $data['Category_ID'];?>">
-				Edit
+				Editar
 				</a>&nbsp;
 				<a href="delete-category.php?id=<?php echo $data['Category_ID'];?>">
-				Delete
+				Borrar
 				</a>
 			</td>
 		</tr>
