@@ -151,7 +151,7 @@
 	<!-- end of search form -->
 	
 	<br/>
-	<div class="col-md-5">
+	<div class="col-md-10">
 	<div class="table-responsive">
 	<table  class='table table-hover table-condensed table-bordered'>
 		<tr class="success">
@@ -175,7 +175,7 @@
 			<td><?php echo $data['city'];?></td>
 			<td><?php echo $data['phone'];?></td>
 			<td><?php echo $data['email'];?></td>
-			<td width="25%">
+			<td width="15%">
 				<a href="delete-clients.php?id=<?php echo $data['id'];?>">
 				Borrar
 				</a>
