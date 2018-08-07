@@ -61,34 +61,5 @@
 		$stmt->close();
 	}
 	send_mail($email);
-	// get admin email from user table
-	$sql_query = "SELECT Email 
-			FROM tbl_user";
-	
-	$stmt = $connect->stmt_init();
-	if($stmt->prepare($sql_query)) {	
-		// Execute query
-		$stmt->execute();
-		// store result 
-		$stmt->store_result();
-		$stmt->bind_result($email);
-		$stmt->fetch();
-		$stmt->close();
-	}
-	
-	// if new reservation has been successfully added to reservation table 
-	// send notification to admin via email
-	if($result){
-		$to = $email;
-		$subject = $reservation_subject;
-		$message = $reservation_message;
-		$from = $admin_email;
-		$headers = "From:" . $from;
-		mail($to,$subject,$message,$headers);
-		echo "OK";
-	}else{
-		echo "Failed";
-	}
-
 	include_once('../includes/close_database.php');
 ?>
