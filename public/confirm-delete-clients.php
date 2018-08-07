@@ -25,6 +25,7 @@
 				// store result 
 				$delete_category_result = $stmt->store_result();
 				$stmt->close();
+				header("location: clients.php");
 			}
 		
 	
