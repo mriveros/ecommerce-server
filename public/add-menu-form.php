@@ -56,31 +56,31 @@
 			$error = array();
 			
 			if(empty($menu_name)){
-				$error['menu_name'] = " <span class='label label-danger'>Required!</span>";
+				$error['menu_name'] = " <span class='label label-danger'>Requerido!</span>";
 			}
 				
 			if(empty($category_ID)){
-				$error['category_ID'] = " <span class='label label-danger'>Required!</span>";
+				$error['category_ID'] = " <span class='label label-danger'>Requerido!</span>";
 			}				
 				
 			if(empty($price)){
-				$error['price'] = " <span class='label label-danger'>Required!</span>";
+				$error['price'] = " <span class='label label-danger'>Requerido!</span>";
 			}else if(!is_numeric($price)){
-				$error['price'] = " <span class='label label-danger'>Price in number!</span>";
+				$error['price'] = " <span class='label label-danger'>Numérico!</span>";
 			}
 
 			if(empty($quantity)){
-				$error['quantity'] = " <span class='label label-danger'>Required!</span>";
+				$error['quantity'] = " <span class='label label-danger'>Requerido!</span>";
 			}else if(!is_numeric($quantity)){
-				$error['quantity'] = " <span class='label label-danger'>Quantity in number!</span>";
+				$error['quantity'] = " <span class='label label-danger'>Numérico!</span>";
 			}
 				
 			if(empty($serve_for)){
-				$error['serve_for'] = " <span class='label label-danger'>Not choosen</span>";
+				$error['serve_for'] = " <span class='label label-danger'>No elegido</span>";
 			}			
 
 			if(empty($description)){
-				$error['description'] = " <span class='label label-danger'>Required!</span>";
+				$error['description'] = " <span class='label label-danger'>Requerido!</span>";
 			}
 			
 			// common image file extensions
@@ -91,7 +91,7 @@
 			$extension = end(explode(".", $_FILES["menu_image"]["name"]));
 					
 			if($image_error > 0){
-				$error['menu_image'] = " <span class='label label-danger'>Not uploaded!</span>";
+				$error['menu_image'] = " <span class='label label-danger'>No se pudo cargar!</span>";
 			}else if(!(($image_type == "image/gif") || 
 				($image_type == "image/jpeg") || 
 				($image_type == "image/jpg") || 
@@ -100,7 +100,7 @@
 				($image_type == "image/pjpeg")) &&
 				!(in_array($extension, $allowedExts))){
 			
-				$error['menu_image'] = " <span class='label label-danger'>Image type must jpg, jpeg, gif, or png!</span>";
+				$error['menu_image'] = " <span class='label label-danger'>Tipo de imagen debe ser jpg, jpeg, gif, o png!</span>";
 			}
 				
 			if(!empty($menu_name) && !empty($category_ID) && !empty($price) && is_numeric($price) &&
@@ -140,9 +140,9 @@
 				}
 				
 				if($result){
-					$error['add_menu'] = " <span class='label label-primary'>Success Added</span>";
+					$error['add_menu'] = " <span class='label label-primary'>Agregado Exitosamente</span>";
 				}else {
-					$error['add_menu'] = " <span class='label label-danger'>Failed</span>";
+					$error['add_menu'] = " <span class='label label-danger'>Error al guardar</span>";
 				}
 			}
 				
@@ -159,7 +159,7 @@
 
 	<div class="col-md-9">
 		<div class="col-md-12">
-		<label>Nombre Menu  :</label><?php echo isset($error['menu_name']) ? $error['menu_name'] : '';?>
+		<label>Nombre Producto  :</label><?php echo isset($error['menu_name']) ? $error['menu_name'] : '';?>
 		<input type="text" class="form-control" name="menu_name"/>
 		</div>
 	    <div class="col-md-3">
@@ -179,7 +179,7 @@
 		</select>
 		<br/>
 
-	    <label>Cateegoría :</label><?php echo isset($error['category_ID']) ? $error['category_ID'] : '';?>
+	    <label>Categoría :</label><?php echo isset($error['category_ID']) ? $error['category_ID'] : '';?>
 		<select name="category_ID" class="form-control">
 			<?php while($stmt_category->fetch()){ ?>
 				<option value="<?php echo $category_data['Category_ID']; ?>"><?php echo $category_data['Category_name']; ?></option>
