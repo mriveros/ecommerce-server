@@ -26,9 +26,9 @@
 		$mail = $smtp->send($to, $headers, $body);
 
 		if (PEAR::isError($mail)) {
-		 echo("OK");
-		 } else {
 		 echo("Failed");
+		 } else {
+		 echo("OK");
  }
 
  
