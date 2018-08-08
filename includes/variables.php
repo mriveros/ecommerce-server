@@ -16,12 +16,12 @@
 	$admin_email = "youremail@gmail.com";
 	$email_subject = "Notification of changes to account information!";
 	$change_message = "You have change your admin info such as email and or password.";
-	$reset_message = "Your new password is ";
+	$reset_message = "Tu nuevo password es  ";
 	
 	//order notification configuration
 	$reservation_subject = "New Order Notification!";
-	$reservation_message = "There is new order, please check Admin Panel.";
-	
+	$reservation_message = "Hay una nueva orden , por favor revise el Panel Admin.";
+	$message_customer = "Felicidades!,\n\nHemos recibido tu pedido, en breve preparamos y te lo enviamos a tu dirección."
 	//copyright
 	$copyright = "";
 ?>

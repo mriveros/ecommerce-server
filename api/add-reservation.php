@@ -60,7 +60,28 @@
 		//$result = $stmt->store_result();
 		$stmt->close();
 	}
-	$message = "Felicidades!,\n\nHemos recibido tu pedido, en breve preparamos y te lo enviamos a tu dirección."
-	send_mail($email, $message);
+	
+	send_mail($email, $message_customer);
+	// check username in user table
+	$sql_query = "SELECT Password, Email 
+	FROM tbl_user 
+	WHERE Username = ?";
+			
+	$stmt = $connect->stmt_init();
+	if($stmt->prepare($sql_query)) {	
+	// Bind your variables to replace the ?s
+	$stmt->bind_param('s', $_SESSION['user']);
+	// Execute query
+	$stmt->execute();
+	// store result 
+	$result = $stmt->store_result();
+	$stmt->bind_result($data['Password'],
+	$data['Email']
+	);
+	$stmt->fetch();
+	$num = $stmt->num_rows;
+	$stmt->close();
+	}
+	send_mail($data['Email'], $reservation_message);
 	include_once('../includes/close_database.php');
 ?>

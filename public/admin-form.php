@@ -62,10 +62,10 @@
 										$stmt->close();
 									}
 								}else{
-									$error['confirm_password'] = " <span class='label label-danger'>New password don't match!</span>";
+									$error['confirm_password'] = " <span class='label label-danger'>Nuevo password no coincide!</span>";
 								}
 							}else{
-								$error['confirm_password'] = " <span class='label label-danger'>New password and re new password required!</span>";
+								$error['confirm_password'] = " <span class='label label-danger'>El nuevo password y confirmar password son requeridos!</span>";
 							}
 						}else{
 							$error['old_password'] = " <span class='label label-danger'>Password anterior incorrecto!</span>";
@@ -158,11 +158,11 @@
 			<input type="password" class="form-control" name="old_password"/>
 			<br/>
 
-		    <label>Password Anterior:</label><?php echo isset($error['new_password']) ? $error['new_password'] : '';?>
+		    <label>Nuevo Password:</label><?php echo isset($error['new_password']) ? $error['new_password'] : '';?>
 			<input type="password" class="form-control" name="new_password"/>
 			<br/>
 
-			<label>Reescribir Password :</label><?php echo isset($error['confirm_password']) ? $error['confirm_password'] : '';?>
+			<label>Confirmar Password :</label><?php echo isset($error['confirm_password']) ? $error['confirm_password'] : '';?>
 			<input type="password" class="form-control" name="confirm_password"/>
 			<br/>
 
