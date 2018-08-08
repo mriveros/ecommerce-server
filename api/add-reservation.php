@@ -63,6 +63,6 @@
 	
 	send_mail($email, $message_customer);
 	// check username in user table
-	send_mail($admin_email, $reservation_message);
+	// send_mail($admin_email, $reservation_message);
 	include_once('../includes/close_database.php');
 ?>
