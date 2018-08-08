@@ -105,7 +105,7 @@
 	?>
 	<h1>Categoría no Disponible
 		<a href="add-category.php">
-			<button class="btn btn-danger">Agregar nueva Categoría</button>
+			<button class="btn btn-success btn-sm">Agregar nueva Categoría</button>
 		</a>
 	</h1>
 	<hr />
@@ -119,7 +119,7 @@
 		<h1>
 			Lista de Categorías
 			<a href="add-category.php">
-				<button class="btn btn-danger">Agregar nueva Categoría</button>
+				<button class="btn btn-success btn-sm">Agregar nueva Categoría</button>
 			</a>
 		</h1>
 		<hr/>
@@ -154,10 +154,10 @@
 			<td><?php echo $data['Category_name'];?></td>
 			<td><img src="<?php echo $data['Category_image']; ?>" width="40" height="40"/></td>
 			<td width="25%">
-				<a href="edit-category.php?id=<?php echo $data['Category_ID'];?>">
+				<a class="btn btn-info btn-xs" href="edit-category.php?id=<?php echo $data['Category_ID'];?>">
 				Editar
 				</a>&nbsp;
-				<a href="delete-category.php?id=<?php echo $data['Category_ID'];?>">
+				<a class="btn btn-danger btn-xs" href="delete-category.php?id=<?php echo $data['Category_ID'];?>">
 				Borrar
 				</a>
 			</td>

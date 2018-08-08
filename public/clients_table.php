@@ -176,7 +176,7 @@
 			<td><?php echo $data['phone'];?></td>
 			<td><?php echo $data['email'];?></td>
 			<td width="15%">
-				<a href="delete-clients.php?id=<?php echo $data['id'];?>">
+				<a class="btn btn-danger btn-xs" href="delete-clients.php?id=<?php echo $data['id'];?>">
 				Borrar
 				</a>
 			</td>

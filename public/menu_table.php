@@ -135,7 +135,7 @@
 	?>
 	<h1>Menu No Disponible
 		<a href="add-menu.php">
-			<button class="btn btn-danger">Agregar nuevo Menú</button>
+			<button class="btn btn-success btn-sm">Agregar nuevo Menú</button>
 		</a>
 	</h1>
 	<hr />
@@ -149,7 +149,7 @@
 		<h1>
 			Lista de Productos
 			<a href="add-menu.php">
-				<button class="btn btn-danger">Agregar nuevo Producto</button>
+				<button class="btn btn-success btn-sm">Agregar nuevo Producto</button>
 			</a>
 			<hr/>
 		</h1>
@@ -194,15 +194,15 @@
 			<td><?php echo $data['Price']." ".$currency;?></td>
 			<td width="15%"><?php echo $data['Category_name'];?></td>
 			<td width="15%">
-				<a href="menu-detail.php?id=<?php echo $data['Menu_ID'];?>">
+				<a class="btn btn-success btn-xs" href="menu-detail.php?id=<?php echo $data['Menu_ID'];?>">
 					Ver
 				</a>&nbsp;
 
-				<a href="edit-menu.php?id=<?php echo $data['Menu_ID'];?>">
+				<a class="btn btn-info btn-xs" href="edit-menu.php?id=<?php echo $data['Menu_ID'];?>">
 					Editar
 				</a>&nbsp;
 
-				<a href="delete-menu.php?id=<?php echo $data['Menu_ID'];?>">
+				<a class="btn btn-danger btn-xs" href="delete-menu.php?id=<?php echo $data['Menu_ID'];?>">
 					Borrar
 				</a>
 			</td>
