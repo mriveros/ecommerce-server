@@ -28,10 +28,10 @@
 
 <body>
 
-    <div id="wrapper">
+    <div id="wrapper" >
 <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
+        <div id="sidebar-wrapper" class="panel panel-primary">
+            <ul class="sidebar-nav " class="panel panel-primary">
 
                 <li class="sidebar-brand"><a href="dashboard.php">Ecommerce Admin</a></li> 
                 <li><a href="pemesanan.php">Lista de Ordenes</a></li>
