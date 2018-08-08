@@ -1,6 +1,6 @@
 <?php
 
-	function send_mail($email){
+	function send_mail($email, $message){
 		
 
 		require_once "Mail.php";
@@ -8,7 +8,7 @@
 		$from = "ecommerce23py@gmail.com";
 		$to = $email;
 		$subject = "Hola!";
-		$body = "Felicidades!,\n\nHemos recibido tu pedido, en breve preparamos y te lo enviamos a tu dirección.";
+		$body = $message;
 
 		$host = "smtp.gmail.com";
 		$username = "ecommerce23py@gmail.com";

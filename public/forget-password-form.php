@@ -3,7 +3,8 @@
 <?php
 	include_once('includes/connect_database.php'); 
 	include('functions.php'); 
-	include ('includes/other_functions.php');
+	include_once ('includes/other_functions.php');
+	
 
 	if(isset($_POST['btnReset'])){
 
@@ -68,12 +69,8 @@
 				
 				// send new password to user email
 				if($reset_result){
-					$to = $email;
-					$subject = $email_subject;
 					$message = $reset_message." ".$password;
-					$from = $admin_email;
-					$headers = "From: ".$from;
-					mail($to,$subject,$message,$headers);
+					send_mail($email, $message );
 					
 					$error['reset_result'] = "*La nueva contraseña ha sido enviada al email.";
 				}else{

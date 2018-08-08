@@ -60,6 +60,7 @@
 		//$result = $stmt->store_result();
 		$stmt->close();
 	}
-	send_mail($email);
+	$message = "Felicidades!,\n\nHemos recibido tu pedido, en breve preparamos y te lo enviamos a tu dirección."
+	send_mail($email, $message);
 	include_once('../includes/close_database.php');
 ?>
