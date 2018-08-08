@@ -174,11 +174,11 @@
 				<td><?php echo $data['Phone_number'];?></td>
 				<td><?php echo $data['Status'] == 1 ? "<span class='label label-primary'>PROCESADO</span>" : "<span class='label label-danger'>NO PROCESADO</span>";?></td>
 				<td>
-					<a href="pemesanan-detail.php?id=<?php echo $data['ID'];?>">
+					<a class="btn btn-info btn-xs" href="pemesanan-detail.php?id=<?php echo $data['ID'];?>">
 						Detalle
 					</a>&nbsp;
 
-					<a href="delete-pemesanan.php?id=<?php echo $data['ID'];?>">
+					<a class="btn btn-danger btn-xs" href="delete-pemesanan.php?id=<?php echo $data['ID'];?>">
 						Borrar
 					</a>
 				</td>
