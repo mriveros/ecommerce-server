@@ -21,7 +21,7 @@
 	//order notification configuration
 	$reservation_subject = "New Order Notification!";
 	$reservation_message = "Hay una nueva orden , por favor revise el Panel Admin.";
-	$message_customer = "Felicidades!,\n\nHemos recibido tu pedido, en breve preparamos y te lo enviamos a tu dirección."
+	$message_customer = "Felicidades!,\n\nHemos recibido tu pedido, en breve preparamos y te lo enviamos a tu dirección.";
 	//copyright
 	$copyright = "";
 ?>
