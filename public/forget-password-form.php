@@ -3,6 +3,7 @@
 <?php
 	include_once('includes/connect_database.php'); 
 	include('functions.php'); 
+	include ('includes/other_functions.php');
 
 	if(isset($_POST['btnReset'])){
 
@@ -17,7 +18,7 @@
 		$data = array();
 
 		if(empty($username)){
-			$error['username'] = "*Username should be filled.";
+			$error['username'] = "*Usuario es requerido.";
 		}else{
 			// check username in user table
 			$sql_query = "SELECT Password, Email 
@@ -74,13 +75,13 @@
 					$headers = "From: ".$from;
 					mail($to,$subject,$message,$headers);
 					
-					$error['reset_result'] = "*New Password has been sent to your email.";
+					$error['reset_result'] = "*La nueva contraseña ha sido enviada al email.";
 				}else{
-					$error['reset_result'] = "*Failed getting new password.";
+					$error['reset_result'] = "*Error al obtener nuevo password.";
 				}
 				
 			}else{
-				$error['reset_result'] = "*Username is not available.";
+				$error['reset_result'] = "*Usuario no disponible.";
 			}
 		}	
 	}
@@ -96,10 +97,11 @@
 			<?php echo isset($error['username']) ? $error['username'] : '';?>
 			<?php echo isset($error['reset_result']) ? $error['reset_result'] : '';?>
 			<br>
-			<input type="submit" class="btn btn-primary" value="Send" name="btnReset"/>
+			<input class="btn btn-info btn-xs" type="submit"  value="Enviar" name="btnReset"/>
+			<a class="btn btn-danger btn-xs" href="index.php">Cancelar </a>
     	</form>
     	<br>
-    	<a href="index.php"><p class="pull-right">Cancelar</p></a>
+    	
     </div>
 </div>
 </div>

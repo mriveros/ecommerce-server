@@ -20,12 +20,12 @@
 		
 		// check whether $username is empty or not
 		if(empty($username)){
-			$error['username'] = "*Username should be filled.";
+			$error['username'] = "*Usuario es requerido.";
 		}
 		
 		// check whether $password is empty or not
 		if(empty($password)){
-			$error['password'] = "*Password should be filled.";
+			$error['password'] = "*Password es requerido.";
 		}
 		
 		// if username and password is not empty, check in database
@@ -87,7 +87,7 @@
 							<br>
 							<button type="submit" name="btnLogin" class="btn btn-primary pull-right">Login</button><br><br>		
 				    </form>
-				<a href="forget-password.php"><p class="pull-right">Olvidar Password?</p></a>
+				<a href="forget-password.php"><p class="pull-right">Olvidaste el Password?</p></a>
 			  </div>
 			</div>
 	</div>
