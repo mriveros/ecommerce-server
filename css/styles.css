@@ -363,3 +363,12 @@ input[type=submit]:hover, input[type=submit]:active, input[type=reset]:hover, in
 #content textarea{
 	height: 70px;
 }
+#footer2 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
